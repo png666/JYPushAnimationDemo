@@ -58,12 +58,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NextViewController *vc = [[NextViewController alloc]init];
     
-    //pushType 默认为PushDefault animationSubtype默认为kCATransitionFromRight ，可以不设置
+    //1.引入#import "UINavigationController+PushAnimation.h"分类
+    //2.pushType 默认为PushDefault animationSubtype默认为kCATransitionFromRight ,可以不设置，如果设置就会有效果
+    
     self.navigationController.pushAnimationType = PushDefault;
     self.navigationController.animationSubtype = kCATransitionFromRight;
     
     self.navigationController.pushAnimationType = indexPath.row;
     [self.navigationController pushAnmiationViewController:vc];
+
+    
 }
 
 - (NSMutableArray *)dataSource{
