@@ -18,12 +18,14 @@ typedef NS_ENUM(NSInteger ,PushType) {
     PushFade,           //交叉淡化过渡
     PushMoveIn,         //新视图移到旧视图上面 依靠animationSubtype方向
     PushReveal,         //将旧视图移开，显示下面的新视图 依靠animationSubtype方向
-    PushPush,
+    PushPush,           //推挤
     PushCube,           //立方体效果 依靠animationSubtype方向
-    PushPageCurl,       //向上翻一页 依靠animationSubtype方向
-    PushPageUnCurl,     //向下翻一页 依靠animationSubtype方向
-    PushRippleEffect,   //滴水效果 依靠animationSubtype方向
-    PushSuckEffect      //收缩效果，如一块布被抽走 依靠animationSubtype方向
+    PushPageCurl,       //翻页 依靠animationSubtype方向
+    PushPageUnCurl,     //反翻页 依靠animationSubtype方向
+    PushRippleEffect,   //滴水效果
+    PushSuckEffect,      //收缩效果
+    PushCameraIrisHollowOpen,  //镜头开
+    PushCameraIrisHollowClose //镜头关
 };
 
 @interface UINavigationController (PushAnimation)

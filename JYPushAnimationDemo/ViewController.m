@@ -72,7 +72,7 @@
 
 - (NSMutableArray *)dataSource{
     if (!_dataSource) {
-        _dataSource = [NSMutableArray arrayWithArray:@[@"PushDefault",@"PushCurlUp",@"PushCurlDown",@"PushFilpFromLeft",@"PushFilpFromRight",@"PushFade",@"PushMoveIn",@"PushReveal",@"PushPush",@"PushCube",@"PushPageCurl",@"PushPageUnCurl",@"PushRippleEffect",@"PushSuckEffect"]];
+        _dataSource = [NSMutableArray arrayWithArray:@[@"PushDefault",@"PushCurlUp",@"PushCurlDown",@"PushFilpFromLeft",@"PushFilpFromRight",@"PushFade",@"PushMoveIn",@"PushReveal",@"PushPush",@"PushCube",@"PushPageCurl",@"PushPageUnCurl",@"PushRippleEffect",@"PushSuckEffect",@"cameraIrisHollowOpen",@"cameraIrisHollowClose"]];
     }
     return _dataSource;
 }

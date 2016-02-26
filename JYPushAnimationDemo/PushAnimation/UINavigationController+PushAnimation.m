@@ -47,7 +47,7 @@ static NSString *subtypeKey = @"subtypeKey";
         CGContextRef context = UIGraphicsGetCurrentContext();
         [UIView beginAnimations:nil context:context];
         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-        [UIView setAnimationDuration:0.6];
+        [UIView setAnimationDuration:0.3];
         [self pushViewController:viewController animated:NO];
         
         switch (self.pushAnimationType) {
@@ -75,7 +75,7 @@ static NSString *subtypeKey = @"subtypeKey";
         //core animation
         CATransition *animation = [CATransition animation];
         animation.delegate = self;
-        animation.duration = 0.6;
+        animation.duration = 0.3;
         animation.timingFunction = UIViewAnimationCurveEaseInOut;
         
         switch (self.pushAnimationType) {
@@ -105,6 +105,12 @@ static NSString *subtypeKey = @"subtypeKey";
                 break;
             case PushRippleEffect:
                 animation.type = @"rippleEffect";
+                break;
+            case PushCameraIrisHollowOpen:
+                animation.type = @"cameraIrisHollowOpen";
+                break;
+            case PushCameraIrisHollowClose:
+                animation.type = @"cameraIrisHollowClose";
                 break;
                 
             default:
